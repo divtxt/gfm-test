@@ -10,6 +10,10 @@ Violets are blue
 
 --------
 
+Local image with title: ![Remote image](pages.jpg)
+
+--------
+
 The next paragraph has the same phrases, but now they are separated by two spaces and a newline character:
 
 Roses are red  
