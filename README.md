@@ -1,7 +1,7 @@
 GitHub Flavored Markdown
 ================================
 
-*View the [source of this content](http://github.github.com/github-flavored-markdown/sample_content.html).*
+*View the [source of this content](https://raw.githubusercontent.com/divtxt/gfm-test/master/README.md).*
 
 Let's get the whole "linebreak" thing out of the way. The next paragraph contains two phrases separated by a single newline character:
 
@@ -163,5 +163,80 @@ I get 10 times more traffic from [Google] [1] than from
   [1]: http://google.com/        "Google"
   [2]: http://search.yahoo.com/  "Yahoo Search"
   [3]: http://search.msn.com/    "MSN Search"
+
+
+GFM Tests
+---------
+
+Multiple underscores in words:
+wow_great_stuff
+do_this_and_do_that_and_another_thing.
+
+
+URL autolinking: http://example.com
+
+
+Strikethrough: ~~Mistaken text.~~
+
+
+Fenced code blocks:
+
+```
+function test() {
+  console.log("notice the blank line before this function?");
+}
+```
+
+
+Syntax highlighting:
+
+```ruby
+require 'redcarpet'
+markdown = Redcarpet.new("Hello World!")
+puts markdown.to_html
+```
+
+
+Tables:
+
+You can create tables by assembling a list of words and dividing them with hyphens - (for the first row), and then separating each column with a pipe `|`:
+
+First Header  | Second Header
+------------- | -------------
+Content Cell  | Content Cell
+Content Cell  | Content Cell
+
+For aesthetic purposes, you can also add extra pipes on the ends:
+
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+Note that the dashes at the top don't need to match the length of the header text exactly:
+
+| Name | Description          |
+| ------------- | ----------- |
+| Help      | Display the help window.|
+| Close     | Closes a window     |
+
+You can also include inline Markdown such as links, bold, italics, or strikethrough:
+
+| Name | Description          |
+| ------------- | ----------- |
+| Help      | ~~Display the~~ help window.|
+| Close     | _Closes_ a window     |
+
+Finally, by including colons : within the header row, you can define text to be left-aligned, right-aligned, or center-aligned:
+
+| Left-Aligned  | Center Aligned  | Right Aligned |
+| :------------ |:---------------:| -----:|
+| col 3 is      | some wordy text | $1600 |
+| col 2 is      | centered        |   $12 |
+| zebra stripes | are neat        |    $1 |
+
+A colon on the left-most side indicates a left-aligned column; a colon on the right-most side indicates a right-aligned column; a colon on both sides indicates a center-aligned column.
+
+
 
 
